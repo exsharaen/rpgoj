@@ -1,0 +1,1 @@
+[["Utama","Sampingan"],{"name":"Periksa Vandhuln","id":1,"icon":296,"desc":"Dilaporkan terjadi serangan Örc. Pergi ke Vandhuln dan selidiki laporan tersebut.","cat":0,"rewards":[["item",1,1,false]],"steps":[["Bicara ke Panglima Sèzhan.",false,1,1,false],["Istirahat sebelum berangkat.",false,1,1,false],["(Opsional) Rekrut anggota untuk menemani perjalanan.",true,2,10,true]]}]
