@@ -1,9 +1,9 @@
 [
 null,
-{"id":1,"expanded":false,"name":"R. Makan","order":2,"parentId":2,"scrollX":876,"scrollY":494.6666666666667},
-{"id":2,"expanded":true,"name":"Monas Matria","order":1,"parentId":0,"scrollX":878.6666666666666,"scrollY":494.6666666666667},
+{"id":1,"expanded":false,"name":"R. Makan","order":2,"parentId":2,"scrollX":613,"scrollY":487},
+{"id":2,"expanded":true,"name":"Monas Matria","order":1,"parentId":0,"scrollX":629,"scrollY":495},
 {"id":3,"expanded":false,"name":"Koridor","order":3,"parentId":2,"scrollX":868,"scrollY":602.6666666666666},
-{"id":4,"expanded":false,"name":"Toko","order":4,"parentId":2,"scrollX":988.5,"scrollY":556.5},
+{"id":4,"expanded":false,"name":"Toko","order":4,"parentId":2,"scrollX":571,"scrollY":397},
 {"id":5,"expanded":false,"name":"Barak","order":5,"parentId":2,"scrollX":878.6666666666666,"scrollY":494.6666666666667},
 {"id":6,"expanded":false,"name":"Ruang Santai","order":6,"parentId":2,"scrollX":1318,"scrollY":742},
 {"id":7,"expanded":false,"name":"Klinik","order":7,"parentId":2,"scrollX":878.6666666666666,"scrollY":494.6666666666667},
