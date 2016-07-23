@@ -24,6 +24,11 @@
  *
  * \E[x] : Show event x's name.
  * \ET   : Show event's name at which this code is called.
+ *
+ * These text codes only work on battle event
+ *
+ * \TL   : Show troop leader's name
+ * \T[x] : Show troop x-th member's name
  */
 
 (function() {
@@ -44,7 +49,7 @@
 	var _Window_Base_convertExtraEscapeCharacters = Window_Base.prototype.convertExtraEscapeCharacters;
 	Window_Base.prototype.convertExtraEscapeCharacters = function(text) {
 		text = _Window_Base_convertExtraEscapeCharacters.call(this, text);
-		// \E[n]
+		// \E[n] (Event #n)
 		text = text.replace(/\x1bE\[(\d+)\]/gi, function() {
 			var eventId = parseInt(arguments[1]);
 			var eventName = "";
@@ -55,9 +60,20 @@
 			}
 			return eventName;
 		}.bind(this));
-		// \ET
+		// \ET (This event)
 		text = text.replace(/\x1bET/gi, function() {
 			return $gameMap.thisEvent().name();
+		}.bind(this));
+		// \TL (Troop's leader)
+		text = text.replace(/\x1bTL/gi, function() {
+			var leader = $gameTroop.members()[0];
+			console.log(leader);
+			return leader != undefined ? leader.originalName() : "???";
+		}.bind(this));
+		// \T[n] (Troop member #n)
+		text = text.replace(/\x1bT\[(\d+)\]/gi, function() {
+			var member = $gameTroop.members()[parseInt(arguments[1])];
+			return member != undefined ? member.originalName() : "???";
 		}.bind(this));
 		return text;
 	};
