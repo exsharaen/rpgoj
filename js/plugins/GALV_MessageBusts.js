@@ -4,6 +4,8 @@
 //  For: RPGMAKER MV
 //  GALV_MessageBusts.js
 //-----------------------------------------------------------------------------
+//  2016-08-11 - Version 2.5 - Made bust sprite object public
+//  2016-08-10 - Version 2.4 - Fixed a crash in MV 1.3 update
 //  2016-04-27 - Version 2.3 - Fixed deployment bug with face name case
 //  2016-04-22 - Version 2.2 - Fixed a bug with still checking for bust when
 //                             Using just faces
@@ -309,6 +311,8 @@ if (Galv.MB.prio == 0) {
 
 };
 
+})();
+
 
 // ---------------- SPRITE GALVMSGBG - NEW
 
@@ -340,7 +344,7 @@ Sprite_GalvBust.prototype.loadBitmap = function() {
 	};
 	if (img.isReady()) {
 		if (this.bitmap) {
-			this._destroyCachedSprite();
+			//this._destroyCachedSprite();
 			this.bitmap = null;
 		};
 		this.bitmap = img;
@@ -418,4 +422,3 @@ Sprite_GalvBust.prototype.baseY = function() {
 };
 
 
-})();
